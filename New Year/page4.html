@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Final Message</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #fad0c4, #ff9a9e);
+      font-family: 'Dancing Script', cursive; /* Romantic font */
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.5rem;
+      line-height: 2;
+      max-width: 800px;
+      overflow: hidden; /* Prevents the text from overflowing */
+      border-right: 0.15em solid #fff; /* Mimics a typing cursor */
+      width: 0; /* Starts with no visible text */
+      animation: typing 10s steps(80) 1s forwards, blink 0.75s step-end infinite; /* Typing animation */
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    .audio-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: none;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .audio-btn:focus {
+      outline: none;
+    }
+
+    audio {
+      display: none; /* Hide the default audio controls */
+    }
+  </style>
+  <!-- Include a link to Google Fonts for the Dancing Script font -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>My Love Letter to You ❤️</h1>
+  <p>
+    My Dearest Kaachu,
+    First of all i wanna thank god thank this year thankyou for coming into my life honey
+    As the year comes to an end, I find myself reflecting on everything we’ve been through—the good, the bad, and everything in between. I know jaan maara karan ae this hasn't been the easiest year for us specially you jaan i don't know kai rite sorry kav kai rite maafi maagu. We’ve had our fair share of ups and downs, and, jaan agar honestly kav toh most of them thoda down j hata dikaa. But jaan mane aa badha ma ek vastu khabar padi ke ek vastu je change na thai is my love jaan my love for you maaro aapda upar no bharoso and the gratitude for you jaan.
+    Kaachu, I want to start by saying I’m truly sorry.Jaan i am sorry for everytime mara karan ae you were down sorry for the moments jaan jya hu taari expectations ne puri na kari sakyo ane jaan i am really sorry mara karan ae tane jyaare jyaare hurt thayu che pain thayu. Dikaa you don't deserve that at all and jaan i swear aa vastuo no mane atlo guilt che ne mane raate ungh nathi aavti aa guilt na aava sapna aave che jaan jo hu je thayu ae badli nathi sakto and i swear mane aeno atlo regret che ne but jaan this doesn't mean ke hu kai nai kru dw hu promise nai krto coz i know you have stopped believing in it ae pan mara karne j che jaan but haa i am being the better version of myself for you better man the man that you deserve jaan and jaan i want to make sure ke aa varas jaan it's all filled with just endless love, trust hapiness and us being together jaan 🥺🧿 
+    Jaan you were always there for me badhi j vastu ma jyaare hu khud saav thirdclass jevo hato tyaare pan and jaan ae taaro je love che ae tara je efforts che jaan ene mein granted leva ni bhul kri and i have realised it in very hard way ke jaan i can't survive without you only thing that matters to me is gou honey nothing else no one else and noo i am not taking it for granted anymore. And jaan aa j karan che i am telling you jaan ke our love our relationship is worth every effort jaan you are worth everything i will or i have to do jaan you are worth every last gram of my love if that's how it is measured 😅
+    Jaan as we are stepping into the New Year together, I want us to leave behind the hurt and everything of the past. Dikaaaaaaaa Let’s make this a new beginning— not just a new year but a new chapter in our love story honey. A chapter only filled with laughter, support, and a deeper connection. Maare jaan tane vadhu smile karavu che maare tane haji sarkhi rite saambhadvu che smjhvu che jaan maare tane dekhaadvu che ke je thai ae je situation aave ae jaan aapde bev mali ne joi lesu ane taaro Brownie tane kai j nai thava dye ae badhu j kri lese jaanI 
+    Kaachu dikaa , you mean everything to me. I’m so grateful for the moments we’ve shared, even the tough ones, kem ke jaan ae moments ma mane taari saachi value khabar padi che jaan and aam it all was a reminder ke jaan mane kem tu j joiye che mane kem aapdu relationship j joiye che over everyone and everything. Jaan you are my heart, my home, my happiness and my everything to sum up and I’m committed to making this year the best one for us hon.
+    So here’s to us, maari jaan —to a new year, a fresh start, and a love that only grows stronger. Thank you for everything jaan thankyou for tolerating me thankyou for giving me that chance thankyou for everything you did for me. I promise to cherish you and to never take this second chance for granted.
+    Happy New Year, my Jaan once again I love you a lot jaan. 
+    With all my heart
+    Brownie
+    <!-- Rest of your message goes here -->
+  </p>
+
+  <audio id="background-audio" loop>
+    <source src="Elvis Presley - Can't Help Falling in Love (Lyrics).mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Button to play audio -->
+  <button class="audio-btn" onclick="startAudio()">🔊</button>
+
+  <script>
+    const audio = document.getElementById('background-audio');
+    const audioBtn = document.querySelector('.audio-btn');
+
+    // Function to start playing audio when user clicks
+    function startAudio() {
+      audio.play().then(() => {
+        // When audio starts playing, change the button icon to indicate it's playing
+        audioBtn.textContent = '🔇'; // Mute icon
+      }).catch((error) => {
+        console.error("Error playing the audio:", error);
+      });
+    }
+
+    // Function to toggle mute/unmute when the button is clicked
+    function toggleAudio() {
+      if (audio.muted) {
+        audio.muted = false;
+        audioBtn.textContent = '🔊'; // Show unmute icon
+      } else {
+        audio.muted = true;
+        audioBtn.textContent = '🔇'; // Show mute icon
+      }
+    }
+  </script>
+</body>
+</html>

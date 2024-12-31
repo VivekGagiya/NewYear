@@ -1,0 +1,61 @@
+<!-- Page 3: Revelation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2024 Revelation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Shadows Into Light', cursive;
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    video {
+      margin-top: 20px;
+      border-radius: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      background-color: #ff6f61;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Well, of course, it's you, honey!</h1>
+  <p>You are the best thing that 2024 gave to me ❤️</p>
+
+  <video id="video" controls>
+    <source src="VN20241231_191018.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <script>
+    const video = document.getElementById('video');
+    video.addEventListener('ended', () => {
+      alert("What do you think? It's done? No, no, there's something for you!");
+      window.location.href = 'page4.html';
+    });
+  </script>
+</body>
+</html>

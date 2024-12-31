@@ -1,0 +1,139 @@
+<!-- Page 1: Happy New Year -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy New Year</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Shadows Into Light', cursive;
+      color: #fff;
+      text-align: center;
+      animation: fadeIn 2s ease;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff6f61;
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #ff6f61;
+      padding: 20px;
+      border-radius: 15px;
+      color: #fff;
+      text-align: center;
+      font-size: 1.5rem;
+      z-index: 1000;
+    }
+
+    .popup .close {
+      margin-top: 10px;
+      padding: 5px 10px;
+      background-color: #fff;
+      color: #ff6f61;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy New Year, My Love!</h1>
+  <p>Are you ready to enter the new year with me?</p>
+  <div class="button-group">
+    <button id="yesButton">Yes</button>
+    <button id="noButton">No</button>
+  </div>
+
+  <!-- Popup for "No" Button -->
+  <div class="overlay" id="overlay"></div>
+  <div class="popup" id="popup">
+    <p>No, that's not an option for you! 😜</p>
+    <button class="close" id="closePopup">Okay</button>
+  </div>
+
+  <script>
+    const noButton = document.getElementById('noButton');
+    const popup = document.getElementById('popup');
+    const overlay = document.getElementById('overlay');
+    const closePopup = document.getElementById('closePopup');
+
+    noButton.addEventListener('click', () => {
+      overlay.style.display = 'block';
+      popup.style.display = 'block';
+    });
+
+    closePopup.addEventListener('click', () => {
+      overlay.style.display = 'none';
+      popup.style.display = 'none';
+    });
+
+    const yesButton = document.getElementById('yesButton');
+    yesButton.addEventListener('click', () => {
+      window.location.href = 'page2.html';
+    });
+  </script>
+</body>
+</html>
